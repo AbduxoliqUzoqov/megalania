@@ -20,7 +20,6 @@ bot.on("text", msg => {
 ➖➖➖➖➖➖➖➖➖
  `);
    }else if (txt.includes("instagram.com")) {
-      bot.sendMessage(chatId, "⌛");
       fetch(API_URL + txt)
         .then(res => res.json())
         .then(data => {
@@ -48,7 +47,7 @@ bot.on("text", msg => {
         });
       //igapi(chatId,text)
     }else{
-      return bot.sendMessage(chatId,txt);
+      return bot.sendMessage(chatId,'Qabul qilindi');
    }
    
 });
