@@ -3,7 +3,7 @@ const admin = '5031002143';
 const API_URL = "https://instaapi-uzoqov.vercel.app/ig?url=";
 
 
-const bot = new TeleBot("6489118017:AAFa36dFUJazpqIcRfzFm5mcUFcDxiZdjvg")
+const bot = new TeleBot("6489118017:AAFa36dFUJazpqIcRfzFm5mcUFcDxiZdjvg");
 
 
 bot.on("text", msg => {
@@ -11,12 +11,12 @@ bot.on("text", msg => {
    const txt = msg.text;
    const chatId = msg.chat.id;
    if(txt == "/start"){
-      bot.sendMessage(chatId, `👋🏻 Assalomu alaykum <a href='tg://user?id=${msg.chat.id}'>${msg.chat.first_name}</a> botimizga xush kelibsiz! `);
+      bot.sendMessage(chatId, `👋🏻 Assalomu alaykum ${msg.chat.first_name}botimizga xush kelibsiz! `);
       bot.sendMessage(admin, `🔔Botimizda Yangi azo
 ➖➖➖➖➖➖➖➖➖
- <a href = 'tg://user?id=${chatId}'>${msg.chat.first_name}</a> Botga🤖 /start Bosdi!
-<b>🔔 Usernamesi:</b> @${msg.chat.username}
-<b>🆔️ Raqami:</b> <code>${chatId}</code>
+ ${msg.chat.first_name} Botga🤖 /start Bosdi!
+🔔 Usernamesi: @${msg.chat.username}
+🆔️ Raqami: ${chatId}
 ➖➖➖➖➖➖➖➖➖
  `);
    }else if (txt.includes("instagram.com")) {
