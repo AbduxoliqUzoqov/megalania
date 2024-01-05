@@ -11,14 +11,14 @@ bot.on("text", msg => {
    const txt = msg.text;
    const chatId = msg.chat.id;
    if(txt == "/start"){
-      bot.sendMessage(chatId, `👋🏻 Assalomu alaykum <a href='tg://user?id=${msg.chat.id}'>${msg.chat.first_name}</a> botimizga xush kelibsiz! `, { parse_mode: 'html' });
+      bot.sendMessage(chatId, `👋🏻 Assalomu alaykum <a href='tg://user?id=${msg.chat.id}'>${msg.chat.first_name}</a> botimizga xush kelibsiz! `);
       bot.sendMessage(admin, `🔔Botimizda Yangi azo
 ➖➖➖➖➖➖➖➖➖
  <a href = 'tg://user?id=${chatId}'>${msg.chat.first_name}</a> Botga🤖 /start Bosdi!
 <b>🔔 Usernamesi:</b> @${msg.chat.username}
 <b>🆔️ Raqami:</b> <code>${chatId}</code>
 ➖➖➖➖➖➖➖➖➖
- `, { parse_mode: 'html' });
+ `);
    }else if (txt.includes("instagram.com")) {
       bot.sendMessage(chatId, "⌛");
       fetch(API_URL + txt)
